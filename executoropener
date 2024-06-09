@@ -1,0 +1,57 @@
+--[[
+
+		Gui2Lua™
+		10zOfficial
+		Version 1.0.0
+
+]]
+
+
+-- Instances
+
+local Test = Instance.new("ScreenGui")
+local Frame = Instance.new("Frame")
+local TextLabel = Instance.new("TextLabel")
+local TextButton = Instance.new("TextButtxon")
+
+-- Properties
+
+Test.Name = "Test"
+Test.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+Test.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+
+Frame.Parent = Test
+Frame.BackgroundColor3 = Color3.new(1, 1, 1)
+Frame.BorderColor3 = Color3.new(0, 0, 0)
+Frame.BorderSizePixel = 0
+Frame.Position = UDim2.new(0.35558781, 0, 0.300248146, 0)
+Frame.Size = UDim2.new(0, 388, 0, 230)
+Frame.Style = Enum.FrameStyle.ChatBlue
+Frame.Active = true
+Frame.Draggable = true
+
+TextLabel.Parent = Frame
+TextLabel.BackgroundColor3 = Color3.new(1, 1, 1)
+TextLabel.BackgroundTransparency = 1
+TextLabel.BorderColor3 = Color3.new(0, 0, 0)
+TextLabel.BorderSizePixel = 0
+TextLabel.Position = UDim2.new(-0.0237716194, 0, -0.0958720297, 0)
+TextLabel.Size = UDim2.new(0, 397, 0, 50)
+TextLabel.Font = Enum.Font.FredokaOne
+TextLabel.Text = "AyAzhy GUI"
+TextLabel.TextColor3 = Color3.new(0, 0, 0)
+TextLabel.TextSize = 40
+
+TextButton.Parent = Frame
+TextButton.BackgroundColor3 = Color3.new(0, 0.580392, 0.847059)
+TextButton.BorderColor3 = Color3.new(0, 0, 0)
+TextButton.BorderSizePixel = 0
+TextButton.Position = UDim2.new(0.33280772, 0, 0.316801637, 0)
+TextButton.Size = UDim2.new(0, 139, 0, 112)
+TextButton.Font = Enum.Font.FredokaOne
+TextButton.Text = "GUI"
+TextButton.TextColor3 = Color3.new(0, 0, 0)
+TextButton.TextSize = 50
+TextButton.MouseButton1Click:Connect(function()
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/AyAzhy/Scripts/main/AyAzhyExecutor"))()
+end)
