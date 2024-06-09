@@ -124,30 +124,30 @@ UICorner_5.Parent = TextBox
 
 -- Scripts
 
-local function XCSFTPY_fake_script() -- Execute.LocalScript 
+local function ZYLPBY_fake_script() -- Execute.LocalScript 
 	local script = Instance.new('LocalScript', Execute)
 
 	local button = script.Parent
 	local textbox = script.Parent.TextBox
 	button.MouseButton1Click:Connect(function()
-		loadstring(textbox.Text)()
+		loadstring(game:HttpGet(script.Parent.Parent.TextBox.Text))()
 	end)
 	
 	
 end
-coroutine.wrap(XCSFTPY_fake_script)()
-local function NEUXF_fake_script() -- Clear.LocalScript 
+coroutine.wrap(ZYLPBY_fake_script)()
+local function SXYRHJF_fake_script() -- Clear.LocalScript 
 	local script = Instance.new('LocalScript', Clear)
 
 	script.Parent.MouseButton1Click:Connect(function()
 		script.Parent.Parent.TextBox.Text = ''
 	end)
 end
-coroutine.wrap(NEUXF_fake_script)()
-local function AHGUFKH_fake_script() -- Main.LocalScript 
+coroutine.wrap(SXYRHJF_fake_script)()
+local function KYXT_fake_script() -- Main.LocalScript 
 	local script = Instance.new('LocalScript', Main)
 
 	script.Parent.Draggable = true
 	script.Parent.Active = true
 end
-coroutine.wrap(AHGUFKH_fake_script)()
+coroutine.wrap(KYXT_fake_script)()
