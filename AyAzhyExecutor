@@ -9,13 +9,11 @@
 
 -- Instances
 
-local Executor = Instance.new("ScreenGui")
 local Main = Instance.new("Frame")
 local UICorner = Instance.new("UICorner")
 local Top = Instance.new("Frame")
 local UICorner_2 = Instance.new("UICorner")
-local Executor_2 = Instance.new("TextLabel")
-local discord = Instance.new("TextLabel")
+local Executor = Instance.new("TextLabel")
 local TextBox = Instance.new("TextBox")
 local UICorner_3 = Instance.new("UICorner")
 local Execute = Instance.new("TextButton")
@@ -25,12 +23,8 @@ local UICorner_5 = Instance.new("UICorner")
 
 -- Properties
 
-Executor.Name = "Executor"
-Executor.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
-Executor.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
-
 Main.Name = "Main"
-Main.Parent = Executor
+Main.Parent = game.StarterGui.Executor
 Main.BackgroundColor3 = Color3.new(0.14902, 0.14902, 0.14902)
 Main.BorderColor3 = Color3.new(0, 0, 0)
 Main.BorderSizePixel = 0
@@ -49,31 +43,18 @@ Top.Size = UDim2.new(0, 453, 0, 25)
 
 UICorner_2.Parent = Top
 
-Executor_2.Name = "Executor"
-Executor_2.Parent = Top
-Executor_2.BackgroundColor3 = Color3.new(0.282353, 0.282353, 0.282353)
-Executor_2.BackgroundTransparency = 1
-Executor_2.BorderColor3 = Color3.new(0, 0, 0)
-Executor_2.BorderSizePixel = 0
-Executor_2.Position = UDim2.new(0.124006391, 0, -0.149565428, 0)
-Executor_2.Size = UDim2.new(0, 173, 0, 37)
-Executor_2.Font = Enum.Font.LuckiestGuy
-Executor_2.Text = "AyAzhy Executor"
-Executor_2.TextColor3 = Color3.new(1, 1, 1)
-Executor_2.TextSize = 30
-
-discord.Name = "discord"
-discord.Parent = Top
-discord.BackgroundColor3 = Color3.new(1, 1, 1)
-discord.BackgroundTransparency = 1
-discord.BorderColor3 = Color3.new(0, 0, 0)
-discord.BorderSizePixel = 0
-discord.Position = UDim2.new(0.587196529, 0, -0.600000024, 0)
-discord.Size = UDim2.new(0, 207, 0, 55)
-discord.Font = Enum.Font.Bangers
-discord.Text = ".gg/uS4KdRrD8z"
-discord.TextColor3 = Color3.new(1, 1, 1)
-discord.TextSize = 25
+Executor.Name = "Executor"
+Executor.Parent = Top
+Executor.BackgroundColor3 = Color3.new(0.282353, 0.282353, 0.282353)
+Executor.BackgroundTransparency = 1
+Executor.BorderColor3 = Color3.new(0, 0, 0)
+Executor.BorderSizePixel = 0
+Executor.Position = UDim2.new(0.327096909, 0, -0.14956513, 0)
+Executor.Size = UDim2.new(0, 173, 0, 37)
+Executor.Font = Enum.Font.LuckiestGuy
+Executor.Text = "AyAzhy Executor"
+Executor.TextColor3 = Color3.new(1, 1, 1)
+Executor.TextSize = 30
 
 TextBox.Parent = Main
 TextBox.BackgroundColor3 = Color3.new(1, 1, 1)
@@ -83,12 +64,9 @@ TextBox.BorderSizePixel = 0
 TextBox.Position = UDim2.new(0.0603448376, 0, 0.173814833, 0)
 TextBox.Size = UDim2.new(0, 394, 0, 138)
 TextBox.Font = Enum.Font.SourceSans
-TextBox.MultiLine = true
 TextBox.Text = ""
 TextBox.TextColor3 = Color3.new(1, 1, 1)
 TextBox.TextSize = 14
-TextBox.TextXAlignment = Enum.TextXAlignment.Left
-TextBox.TextYAlignment = Enum.TextYAlignment.Top
 
 UICorner_3.Parent = TextBox
 
@@ -124,30 +102,27 @@ UICorner_5.Parent = Clear
 
 -- Scripts
 
-local function EQRSFGY_fake_script() -- Execute.LocalScript 
+local function VJZVVEE_fake_script() -- Execute.LocalScript 
 	local script = Instance.new('LocalScript', Execute)
 
-	local button = script.Parent
-	local textbox = script.Parent.TextBox
-	button.MouseButton1Click:Connect(function()
+	local textbox = script.Parent.Parent.TextBox
+	script.Parent.MouseButton1Click:Connect(function()
 		loadstring(textbox.Text)()
 	end)
-	
-	
 end
-coroutine.wrap(EQRSFGY_fake_script)()
-local function BRTJ_fake_script() -- Clear.LocalScript 
+coroutine.wrap(VJZVVEE_fake_script)()
+local function GDPEO_fake_script() -- Clear.LocalScript 
 	local script = Instance.new('LocalScript', Clear)
 
 	script.Parent.MouseButton1Click:Connect(function()
 		script.Parent.Parent.TextBox.Text = ''
 	end)
 end
-coroutine.wrap(BRTJ_fake_script)()
-local function JAGM_fake_script() -- Main.LocalScript 
+coroutine.wrap(GDPEO_fake_script)()
+local function QHFRE_fake_script() -- Main.LocalScript 
 	local script = Instance.new('LocalScript', Main)
 
 	script.Parent.Draggable = true
 	script.Parent.Active = true
 end
-coroutine.wrap(JAGM_fake_script)()
+coroutine.wrap(QHFRE_fake_script)()
