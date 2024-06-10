@@ -9,23 +9,19 @@
 
 -- Instances
 
-local Test = Instance.new("ScreenGui")
 local Frame = Instance.new("Frame")
 local TextLabel = Instance.new("TextLabel")
-local TextButton = Instance.new("TextButtxon")
+local UICorner = Instance.new("UICorner")
+local TextButton = Instance.new("TextButton")
 
 -- Properties
 
-Test.Name = "Test"
-Test.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
-Test.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
-
-Frame.Parent = Test
+Frame.Parent = game.StarterGui.asd
 Frame.BackgroundColor3 = Color3.new(1, 1, 1)
 Frame.BorderColor3 = Color3.new(0, 0, 0)
 Frame.BorderSizePixel = 0
-Frame.Position = UDim2.new(0.35558781, 0, 0.300248146, 0)
-Frame.Size = UDim2.new(0, 388, 0, 230)
+Frame.Position = UDim2.new(0.355383545, 0, 0.274193555, 0)
+Frame.Size = UDim2.new(0, 410, 0, 305)
 Frame.Style = Enum.FrameStyle.ChatBlue
 Frame.Active = true
 Frame.Draggable = true
@@ -35,23 +31,25 @@ TextLabel.BackgroundColor3 = Color3.new(1, 1, 1)
 TextLabel.BackgroundTransparency = 1
 TextLabel.BorderColor3 = Color3.new(0, 0, 0)
 TextLabel.BorderSizePixel = 0
-TextLabel.Position = UDim2.new(-0.0237716194, 0, -0.0958720297, 0)
-TextLabel.Size = UDim2.new(0, 397, 0, 50)
+TextLabel.Position = UDim2.new(-0.0321685039, 0, -0.063391313, 0)
+TextLabel.Size = UDim2.new(0, 406, 0, 40)
 TextLabel.Font = Enum.Font.FredokaOne
-TextLabel.Text = "AyAzhy GUI"
+TextLabel.Text = "AyAzhy Opener"
 TextLabel.TextColor3 = Color3.new(0, 0, 0)
 TextLabel.TextSize = 40
 
+UICorner.Parent = TextLabel
+
 TextButton.Parent = Frame
-TextButton.BackgroundColor3 = Color3.new(0, 0.580392, 0.847059)
+TextButton.BackgroundColor3 = Color3.new(0, 0.482353, 0.686275)
 TextButton.BorderColor3 = Color3.new(0, 0, 0)
 TextButton.BorderSizePixel = 0
-TextButton.Position = UDim2.new(0.33280772, 0, 0.316801637, 0)
-TextButton.Size = UDim2.new(0, 139, 0, 112)
+TextButton.Position = UDim2.new(0.255020201, 0, 0.274255574, 0)
+TextButton.Size = UDim2.new(0, 200, 0, 136)
 TextButton.Font = Enum.Font.FredokaOne
 TextButton.Text = "GUI"
 TextButton.TextColor3 = Color3.new(0, 0, 0)
-TextButton.TextSize = 50
-TextButton.MouseButton1Click:Connect(function()
+TextButton.TextSize = 59
+TextButton.MouseButton1Down:connect(function()
 	loadstring(game:HttpGet("https://raw.githubusercontent.com/AyAzhy/Scripts/main/AyAzhyExecutor"))()
 end)
