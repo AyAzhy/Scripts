@@ -16,11 +16,11 @@ local Top = Instance.new("Frame")
 local UICorner_2 = Instance.new("UICorner")
 local Executor_2 = Instance.new("TextLabel")
 local discord = Instance.new("TextLabel")
-local Execute = Instance.new("TextButton")
-local UICorner_3 = Instance.new("UICorner")
-local Clear = Instance.new("TextButton")
-local UICorner_4 = Instance.new("UICorner")
 local TextBox = Instance.new("TextBox")
+local UICorner_3 = Instance.new("UICorner")
+local Execute = Instance.new("TextButton")
+local UICorner_4 = Instance.new("UICorner")
+local Clear = Instance.new("TextButton")
 local UICorner_5 = Instance.new("UICorner")
 
 -- Properties
@@ -75,36 +75,6 @@ discord.Text = ".gg/uS4KdRrD8z"
 discord.TextColor3 = Color3.new(1, 1, 1)
 discord.TextSize = 25
 
-Execute.Name = "Execute"
-Execute.Parent = Main
-Execute.BackgroundColor3 = Color3.new(1, 1, 1)
-Execute.BackgroundTransparency = 1
-Execute.BorderColor3 = Color3.new(0, 0, 0)
-Execute.BorderSizePixel = 0
-Execute.Position = UDim2.new(0.045658946, 0, 0.802974701, 0)
-Execute.Size = UDim2.new(0, 149, 0, 40)
-Execute.Font = Enum.Font.PermanentMarker
-Execute.Text = "Execute"
-Execute.TextColor3 = Color3.new(0.756863, 0.756863, 0.756863)
-Execute.TextSize = 60
-
-UICorner_3.Parent = Execute
-
-Clear.Name = "Clear"
-Clear.Parent = Main
-Clear.BackgroundColor3 = Color3.new(1, 1, 1)
-Clear.BackgroundTransparency = 1
-Clear.BorderColor3 = Color3.new(0, 0, 0)
-Clear.BorderSizePixel = 0
-Clear.Position = UDim2.new(0.611068487, 0, 0.778781056, 0)
-Clear.Size = UDim2.new(0, 197, 0, 54)
-Clear.Font = Enum.Font.PermanentMarker
-Clear.Text = "Clear"
-Clear.TextColor3 = Color3.new(0.756863, 0.756863, 0.756863)
-Clear.TextSize = 60
-
-UICorner_4.Parent = Clear
-
 TextBox.Parent = Main
 TextBox.BackgroundColor3 = Color3.new(1, 1, 1)
 TextBox.BackgroundTransparency = 1
@@ -120,34 +90,64 @@ TextBox.TextSize = 14
 TextBox.TextXAlignment = Enum.TextXAlignment.Left
 TextBox.TextYAlignment = Enum.TextYAlignment.Top
 
-UICorner_5.Parent = TextBox
+UICorner_3.Parent = TextBox
+
+Execute.Name = "Execute"
+Execute.Parent = Main
+Execute.BackgroundColor3 = Color3.new(1, 1, 1)
+Execute.BackgroundTransparency = 1
+Execute.BorderColor3 = Color3.new(0, 0, 0)
+Execute.BorderSizePixel = 0
+Execute.Position = UDim2.new(0.045658946, 0, 0.802974701, 0)
+Execute.Size = UDim2.new(0, 149, 0, 40)
+Execute.Font = Enum.Font.PermanentMarker
+Execute.Text = "Execute"
+Execute.TextColor3 = Color3.new(0.756863, 0.756863, 0.756863)
+Execute.TextSize = 60
+
+UICorner_4.Parent = Execute
+
+Clear.Name = "Clear"
+Clear.Parent = Main
+Clear.BackgroundColor3 = Color3.new(1, 1, 1)
+Clear.BackgroundTransparency = 1
+Clear.BorderColor3 = Color3.new(0, 0, 0)
+Clear.BorderSizePixel = 0
+Clear.Position = UDim2.new(0.611068487, 0, 0.778781056, 0)
+Clear.Size = UDim2.new(0, 197, 0, 54)
+Clear.Font = Enum.Font.PermanentMarker
+Clear.Text = "Clear"
+Clear.TextColor3 = Color3.new(0.756863, 0.756863, 0.756863)
+Clear.TextSize = 60
+
+UICorner_5.Parent = Clear
 
 -- Scripts
 
-local function ZYLPBY_fake_script() -- Execute.LocalScript 
+local function EQRSFGY_fake_script() -- Execute.LocalScript 
 	local script = Instance.new('LocalScript', Execute)
 
 	local button = script.Parent
 	local textbox = script.Parent.TextBox
 	button.MouseButton1Click:Connect(function()
-		loadstring(game:HttpGet(script.Parent.Parent.TextBox.Text))()
+		loadstring(textbox.Text)()
 	end)
 	
 	
 end
-coroutine.wrap(ZYLPBY_fake_script)()
-local function SXYRHJF_fake_script() -- Clear.LocalScript 
+coroutine.wrap(EQRSFGY_fake_script)()
+local function BRTJ_fake_script() -- Clear.LocalScript 
 	local script = Instance.new('LocalScript', Clear)
 
 	script.Parent.MouseButton1Click:Connect(function()
 		script.Parent.Parent.TextBox.Text = ''
 	end)
 end
-coroutine.wrap(SXYRHJF_fake_script)()
-local function KYXT_fake_script() -- Main.LocalScript 
+coroutine.wrap(BRTJ_fake_script)()
+local function JAGM_fake_script() -- Main.LocalScript 
 	local script = Instance.new('LocalScript', Main)
 
 	script.Parent.Draggable = true
 	script.Parent.Active = true
 end
-coroutine.wrap(KYXT_fake_script)()
+coroutine.wrap(JAGM_fake_script)()
