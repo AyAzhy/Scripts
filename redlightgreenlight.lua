@@ -1,7 +1,7 @@
 local Rayfield = loadstring(game:HttpGet('https://sirius.menu/rayfield'))()
 
 local Window = Rayfield:CreateWindow({
-    Name = "Red Light Green Light 👨‍💻",
+    Name = "Red Light Green Light 👨‍💻 | AyAzhy",
     Icon = 0, -- Icon in Topbar. Can use Lucide Icons (string) or Roblox Image (number). 0 to use no icon (default).
     LoadingTitle = "Loading...",
     LoadingSubtitle = "by AyAzhy",
@@ -22,7 +22,7 @@ local Window = Rayfield:CreateWindow({
        RememberJoins = true -- Set this to false to make them join the discord every time they load it up
     },
  
-    KeySystem = true, -- Set this to true to use our key system
+    KeySystem = false, -- Set this to true to use our key system
     KeySettings = {
        Title = "Red Light Green Light 👨‍💻 | Key",
        Subtitle = "Key System",
